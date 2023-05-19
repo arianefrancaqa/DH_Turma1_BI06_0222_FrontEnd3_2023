@@ -1,4 +1,5 @@
 import './App.css'
+import ItemComponent from './components/ItemComponent';
 
 /* Array de cidades que deve ser utilizado na atividade */
 const cities = [
@@ -78,12 +79,25 @@ const cities = [
 function App() {
 
   return (
-    <div className="App">
-      <React.Fragment>
-        {/* ....Componente que renderiza as cidades específicas */}
-      </React.Fragment>
+    <div className="container">
+
+      <h1 className="title">Lista de Cidades do Brasil</h1>
+
+      {
+        cities.map((item, index) => {
+          // //Primeira abordagem para filtrar dados
+          if (item.country.match("BRA")) {
+            return <ItemComponent
+              key={index}
+              {...item}
+            />
+          }
+          
+        })
+      }
     </div>
   )
 }
 
 export default App
+
