@@ -76,7 +76,7 @@ function App() {
           type="text"
           value={title}
           fnOnChange={handleChangeTitle}
-          onKeyUp={formValidator}
+        //onKeyUp={formValidator}
         />
 
         <InputComponent
@@ -84,12 +84,12 @@ function App() {
           type="url"
           value={imgUrl}
           fnOnChange={handleChangeImgUrl}
-          onKeyUp={formValidator}
+        //onKeyUp={formValidator}
         />
 
         <button
           onClick={handleButtonAddElement}
-          disabled={!isFormValid}
+        //disabled={!isFormValid}
         >Salvar</button>
 
       </form>
