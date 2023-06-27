@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import { useState } from "react";
+=======
+import { useState, useContext } from "react";
+
+import ServiceContext from "../contexts/ServiceContext";
+
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 
 function Form() {
 
@@ -10,6 +17,12 @@ function Form() {
 
     const [form, setForm] = useState(defaultFormValues);
 
+<<<<<<< HEAD
+=======
+    const { services, dispatch } = useContext(ServiceContext);
+
+
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
     const handleCreateService = (event) => {
         event.preventDefault();
 
@@ -21,7 +34,16 @@ function Form() {
                 time: form.time
             };
 
+<<<<<<< HEAD
             console.log(newService);
+=======
+            dispatch(
+                {
+                    type: "ADD_SERVICE",
+                    payload: [newService, ...services]
+                }
+            );
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 
             setForm(defaultFormValues);
 

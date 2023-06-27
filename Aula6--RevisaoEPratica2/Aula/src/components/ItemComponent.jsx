@@ -1,6 +1,10 @@
 import styles from "./ItemComponent.module.css";
 
+<<<<<<< HEAD
 function ItemComponent({ bimestre, ano, disciplinas }) {
+=======
+function ItemComponent({ ano, disciplinas, bimestre }) {
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
     return (
         <div className={styles.div}>
             <h1>Bimestre {bimestre} - Ano {ano}</h1>

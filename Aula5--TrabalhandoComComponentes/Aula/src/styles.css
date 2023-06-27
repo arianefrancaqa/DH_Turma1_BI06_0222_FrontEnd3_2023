@@ -5,21 +5,36 @@
     font-family: "Roboto", sans-serif;
 }
 
+<<<<<<< HEAD
 .container{
+=======
+.container {
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+<<<<<<< HEAD
 .title{
     font-size: 2em;
+=======
+.title {
+    font-size: 2rem;
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
     color: #a31b98;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 h3{
     color: chocolate;
 }
 
+=======
+h3 {
+    color: chocolate;
+}
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d

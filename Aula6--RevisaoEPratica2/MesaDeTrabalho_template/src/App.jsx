@@ -1,5 +1,8 @@
 import './App.css'
+<<<<<<< HEAD
 import ItemComponent from './components/ItemComponent';
+=======
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 
 /* Array de cidades que deve ser utilizado na atividade */
 const cities = [
@@ -79,6 +82,7 @@ const cities = [
 function App() {
 
   return (
+<<<<<<< HEAD
     <div className="container">
 
       <h1 className="title">Lista de Cidades do Brasil</h1>
@@ -95,9 +99,19 @@ function App() {
           
         })
       }
+=======
+    <div className="App">
+      <React.Fragment>
+        {/* ....Componente que renderiza as cidades específicas */}
+      </React.Fragment>
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
     </div>
   )
 }
 
+<<<<<<< HEAD
 export default App
 
+=======
+export default App
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d

@@ -1,11 +1,15 @@
 import './App.css';
 import { useState, useEffect, useReducer } from 'react';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 function App() {
 
   const [newTodo, setNewTodo] = useState("");
 
+<<<<<<< HEAD
   // /// Trocamos o useState() pelo useReducer()
   // const [todos, setTodos] = useState(
   //   [
@@ -23,6 +27,22 @@ function App() {
       default:
         return state;
     }
+=======
+  function todoReducer(state, action) {
+
+    switch (action.type) {
+
+      case "ADD_TODO":
+        return action.payload;
+
+      case "DELETE_TODO":
+        return state.filter(todo => todo.id != action.payload);
+
+      default:
+        return state;
+    }
+
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
   }
 
   const [todos, dispatch] = useReducer(todoReducer, [
@@ -30,6 +50,7 @@ function App() {
       id: 2354345345,
       text: "Aprender useReducer"
     }
+<<<<<<< HEAD
   ])
 
   useEffect(() => {
@@ -37,13 +58,38 @@ function App() {
     /// Buscamos se existe algum dado no Storage
 
     /// Salvamos o novo estado da lista após buscar no Storage (se existir algo)
+=======
+  ]);
+
+  useEffect(() => {
+
+    const todos = localStorage.getItem("todos");
+
+    if (todos) {
+
+      const todosJS = JSON.parse(todos)
+
+      dispatch(
+        {
+          type: "ADD_TODO",
+          payload: todosJS
+        }
+      );
+
+    }
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 
   }, []); // Executamos 1x ao montar o componente <App />
 
 
   useEffect(() => {
+<<<<<<< HEAD
     /// Precisamos manter o Storage sempre atualizado
   }, []);
+=======
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]); /// Executamos todas as vezes que "todos" sofrer alteração no estado
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 
   const handleNewTodo = () => {
     if (newTodo.trim() !== '') {
@@ -53,15 +99,22 @@ function App() {
         text: newTodo
       };
 
+<<<<<<< HEAD
       console.log(todo);
 
       /// Salvamos o novo item na Lista de tarefas
+=======
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
       dispatch(
         {
           type: "ADD_TODO",
           payload: [todo, ...todos]
         }
+<<<<<<< HEAD
       )
+=======
+      );
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
 
       setNewTodo("");
 
@@ -71,8 +124,18 @@ function App() {
   };
 
   const handleRemoveTodo = (id) => {
+<<<<<<< HEAD
     console.log(id);
     /// Removemos o item selecionado da lista de Tarefas
+=======
+
+    dispatch(
+      {
+        type: "DELETE_TODO",
+        payload: id
+      }
+    )
+>>>>>>> afa423e254ce4f7864299fa0cb47bf5b9fe0027d
   };
 
 
