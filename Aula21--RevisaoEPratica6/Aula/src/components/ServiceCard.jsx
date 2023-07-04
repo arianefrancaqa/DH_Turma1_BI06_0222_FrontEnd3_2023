@@ -1,4 +1,19 @@
+import { useContext } from "react";
+import ServiceContext from "../contexts/ServiceContext";
+
 function ServiceCard({ service }) {
+
+    const { services, dispatch } = useContext(ServiceContext);
+
+    const handleRemoveService = (id) => {
+
+        dispatch(
+            {
+                type: "REMOVE_SERVICE",
+                payload: id
+            }
+        )
+    }
 
     return (
 
@@ -17,7 +32,7 @@ function ServiceCard({ service }) {
             <button style={{
                 backgroundColor: "#8a6df1",
                 color: "#2F2D2D"
-            }} onClick={() => { /* Aqui vai a função de remoção que chama o dispacth do reducer */ }}>Remover
+            }} onClick={() => handleRemoveService(service.id)}>Remover
             </button>
 
         </div>
